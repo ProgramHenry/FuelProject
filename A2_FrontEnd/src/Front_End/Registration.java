@@ -77,6 +77,10 @@ public class Registration extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -88,12 +92,12 @@ public class Registration extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(20, 20, 70, 15);
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(260, 190, 80, 30);
+        jTextField2.setBounds(250, 220, 80, 30);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Zipcode");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(260, 170, 90, 15);
+        jLabel3.setBounds(250, 200, 90, 15);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Address 1");
@@ -103,12 +107,12 @@ public class Registration extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("State");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(260, 70, 32, 15);
+        jLabel5.setBounds(250, 140, 32, 15);
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY" }));
         jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(260, 90, 50, 30);
+        jComboBox1.setBounds(250, 160, 50, 30);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Address 2");
@@ -136,7 +140,7 @@ public class Registration extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(210, 260, 180, 30);
+        jButton1.setBounds(210, 270, 180, 30);
 
         jLabel9.setForeground(new java.awt.Color(0, 0, 204));
         jLabel9.setText("INVALID CHARACTERS");
@@ -172,7 +176,7 @@ public class Registration extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(0, 0, 204));
         jLabel13.setText("REQUIRED");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(260, 120, 130, 13);
+        jLabel13.setBounds(250, 190, 130, 13);
 
         jLabel14.setForeground(new java.awt.Color(0, 0, 204));
         jLabel14.setText("MAX 100 CHARACTERS");
@@ -187,22 +191,36 @@ public class Registration extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(0, 0, 204));
         jLabel16.setText("MAX 9 CHARACTERS");
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(230, 220, 140, 13);
+        jLabel16.setBounds(240, 250, 140, 13);
 
         jLabel17.setForeground(new java.awt.Color(0, 0, 204));
         jLabel17.setText("MIN 3 CHARACTERS");
         jPanel1.add(jLabel17);
-        jLabel17.setBounds(230, 220, 140, 13);
+        jLabel17.setBounds(240, 250, 140, 13);
 
         jLabel18.setForeground(new java.awt.Color(0, 0, 204));
         jLabel18.setText("INVALID CHARACTERS");
         jPanel1.add(jLabel18);
-        jLabel18.setBounds(230, 220, 140, 13);
+        jLabel18.setBounds(240, 250, 140, 13);
 
         jLabel20.setForeground(new java.awt.Color(0, 0, 204));
         jLabel20.setText("REQUIRED");
         jPanel1.add(jLabel20);
         jLabel20.setBounds(260, 220, 90, 13);
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel22.setText("Password");
+        jPanel1.add(jLabel22);
+        jLabel22.setBounds(250, 80, 80, 13);
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel23.setText("Username");
+        jPanel1.add(jLabel23);
+        jLabel23.setBounds(250, 20, 100, 20);
+        jPanel1.add(jTextField1);
+        jTextField1.setBounds(250, 40, 120, 30);
+        jPanel1.add(jTextField4);
+        jTextField4.setBounds(250, 100, 120, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\jonat\\OneDrive\\Desktop\\School\\Summer2019\\SoftwareDevelopment\\assignment2\\registerbackground.jpg")); // NOI18N
         jPanel1.add(jLabel1);
@@ -212,11 +230,11 @@ public class Registration extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
         );
 
         pack();
@@ -301,7 +319,10 @@ public class Registration extends javax.swing.JFrame {
         }
         else{
             for(int x = 0; x<Zip.length();x++){
-                if (Zip.charAt(x)!='1'&&Zip.charAt(x)!='2'&&Zip.charAt(x)!='3'&&Zip.charAt(x)!='4'&&Zip.charAt(x)!='5'&&Zip.charAt(x)!='6'&&Zip.charAt(x)!='7'&&Zip.charAt(x)!='8'&&Zip.charAt(x)!='9'){
+                if (Zip.charAt(x)=='1'||Zip.charAt(x)=='2'||Zip.charAt(x)=='3'||Zip.charAt(x)=='4'||Zip.charAt(x)=='5'||Zip.charAt(x)=='6'||Zip.charAt(x)=='7'||Zip.charAt(x)=='8'||Zip.charAt(x)=='9'){
+                    
+                }
+                else{
                     jLabel18.setVisible(true);
                     flag = 1;
                     break;
@@ -310,6 +331,10 @@ public class Registration extends javax.swing.JFrame {
         }
         
         if(flag == 0){
+            String type = "register";
+            DbConnect connect = new DbConnect(type);
+            connect.dataentry(name, name, A1, A2, City, Zip); // MAKE SURE TO SHOW CONNECTION WAS SUCCESSFUL WITH POP UP AND TO INCLUDE THE USERNAME BECAUSE IT IS A PRIMARY KEY
+            
             setVisible(false);
             FuelForm form = new FuelForm(A1);
             form.setVisible(true);
@@ -370,6 +395,8 @@ public class Registration extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -378,8 +405,10 @@ public class Registration extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;

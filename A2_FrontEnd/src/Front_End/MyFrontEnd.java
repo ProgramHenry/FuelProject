@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package Front_End;
+import com.sun.jdi.connect.spi.Connection;
+import java.sql.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -13,10 +15,7 @@ import javax.swing.SwingUtilities;
  * @author jonat
  */
 public class MyFrontEnd extends javax.swing.JFrame{
-
-    /**
-     * Creates new form MyFrontEnd
-     */
+    
     public MyFrontEnd() {
         initComponents();
         jLabel5.setVisible(false);
@@ -125,9 +124,14 @@ public class MyFrontEnd extends javax.swing.JFrame{
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String loginfield = jTextField1.getText();
-        String passwordfield = jPasswordField1.getText();
+        char[] passwordfield = jPasswordField1.getPassword();
         
-        if(passwordfield.contains("password")&&(loginfield.contains("username"))){
+        String pwd = String.copyValueOf(passwordfield); // convert array to strong
+        
+        DbConnect connect = new DbConnect(loginfield);
+        
+        
+        if(connect.verifylogin(loginfield,pwd)){
             jLabel5.setVisible(false);
             setVisible(false);
             SuccessfulLogin success = new SuccessfulLogin(loginfield);
@@ -181,7 +185,7 @@ public class MyFrontEnd extends javax.swing.JFrame{
             java.util.logging.Logger.getLogger(MyFrontEnd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -189,6 +193,7 @@ public class MyFrontEnd extends javax.swing.JFrame{
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

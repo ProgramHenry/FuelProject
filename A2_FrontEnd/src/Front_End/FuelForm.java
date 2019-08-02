@@ -9,9 +9,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.Calendar;
-import java.util.Date;
+
 
 
 
@@ -20,6 +20,8 @@ import java.util.Date;
  * @author jonat
  */
 public class FuelForm extends javax.swing.JFrame {
+    
+    String address; // initialized address globally in order to use it for the data base
 
     /**
      * Creates new form FuelForm
@@ -33,6 +35,8 @@ public class FuelForm extends javax.swing.JFrame {
         jLabel8.setText(formaddress);
         jLabel9.setVisible(false);
         jLabel10.setVisible(false);
+        
+        address = formaddress;
     }
 
     /**
@@ -58,7 +62,7 @@ public class FuelForm extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        date_chooser = new com.toedter.calendar.JDateChooser();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -141,8 +145,8 @@ public class FuelForm extends javax.swing.JFrame {
         jLabel10.setText("REQUIRED");
         jPanel1.add(jLabel10);
         jLabel10.setBounds(40, 130, 180, 20);
-        jPanel1.add(jDateChooser1);
-        jDateChooser1.setBounds(40, 250, 180, 30);
+        jPanel1.add(date_chooser);
+        date_chooser.setBounds(40, 250, 180, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\jonat\\OneDrive\\Desktop\\School\\Summer2019\\SoftwareDevelopment\\assignment2\\formbackground.jpg")); // NOI18N
         jPanel1.add(jLabel1);
@@ -170,6 +174,8 @@ public class FuelForm extends javax.swing.JFrame {
         int flag = 0;
         
         String gallons = jTextField4.getText();
+        
+        
         jLabel9.setVisible(false);
         jLabel10.setVisible(false);
         
@@ -187,11 +193,16 @@ public class FuelForm extends javax.swing.JFrame {
             }
         
         if(flag == 0){
+            
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            String date = sdf.format(date_chooser.getDate());
+            //pst.setString(7,date);
+            
             setVisible(false);
             MyFrontEnd loginnow = new MyFrontEnd();
             loginnow.setVisible(true);
             
-            
+          
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -232,8 +243,8 @@ public class FuelForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JDateChooser date_chooser;
     private javax.swing.JButton jButton1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
